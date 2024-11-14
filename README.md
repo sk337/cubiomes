@@ -18,6 +18,23 @@ You should be familiar with the C programming language. A basic understanding of
 
 This section is meant to give you a quick starting point with small example programs if you want to use this library to find your own biome-dependent features.
 
+### CMake fetch content usage
+
+```cmake
+include(FetchContent)
+FetchContent_Declare(
+  cubiomes
+  GIT_REPOSITORY https://github.com/Cubitect/cubiomes.git
+  GIT_TAG        master # <HASH or TAG>
+)
+FetchContent_MakeAvailable(cubiomes)
+
+target_link_libraries(target_name cubiomes_static)
+```
+
+```cpp
+#include <cubiomes/*.h>
+```
 
 ### Biome Generator
 
@@ -25,7 +42,7 @@ Let's create a simple program called `find_biome_at.c` which tests seeds for a M
 
 ```C
 // check the biome at a block position
-#include "generator.h"
+#include "cubiomes/generator.h"
 #include <stdio.h>
 
 int main()
@@ -86,8 +103,8 @@ The only supported values for `scale` are 1, 4, 16, 64, and (for the Overworld) 
 
 ```C
 // generate an image of the world
-#include "generator.h"
-#include "util.h"
+#include "cubiomes/generator.h"
+#include "cubiomes/util.h"
 
 int main()
 {
@@ -143,7 +160,7 @@ Note: some structures (in particular desert pyramids, jungle temples, and woodla
 
 ```C
 // find a seed with a certain structure at the origin chunk
-#include "finders.h"
+#include "cubiomes/finders.h"
 #include <stdio.h>
 
 int main()
@@ -193,7 +210,7 @@ The function `searchAll48()` can be used to find a complete set of 48-bit seed b
 
 ```C
 // find seeds with a quad-witch-hut about the origin
-#include "quadbase.h"
+#include "cubiomes/quadbase.h"
 #include <stdio.h>
 
 int check(uint64_t s48, void *data)
@@ -269,7 +286,7 @@ Strongholds, as well as the world spawn point, actually search until they find a
 
 ```C
 // find spawn and the first N strongholds
-#include "finders.h"
+#include "cubiomes/finders.h"
 #include <stdio.h>
 
 int main()
