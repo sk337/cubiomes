@@ -33,10 +33,10 @@ endif
 libcubiomes: noise.o biomes.o layers.o biomenoise.o generator.o finders.o util.o quadbase.o
 	$(AR) $(ARFLAGS) libcubiomes.a $^
 
-finders.o: finders.c finders.h
+finders.o: finders.c cubiomes/finders.h
 	$(CC) -c $(CFLAGS) $<
 
-generator.o: generator.c generator.h
+generator.o: generator.c cubiomes/generator.h
 	$(CC) -c $(CFLAGS) $<
 
 biomenoise.o: biomenoise.c
@@ -45,19 +45,19 @@ biomenoise.o: biomenoise.c
 biometree.o: biometree.c
 	$(CC) -c $(CFLAGS) $<
 
-layers.o: layers.c layers.h
+layers.o: layers.c cubiomes/layers.h
 	$(CC) -c $(CFLAGS) $<
 
-biomes.o: biomes.c biomes.h
+biomes.o: biomes.c cubiomes/biomes.h
 	$(CC) -c $(CFLAGS) $<
 
-noise.o: noise.c noise.h
+noise.o: noise.c cubiomes/noise.h
 	$(CC) -c $(CFLAGS) $<
 
-util.o: util.c util.h
+util.o: util.c cubiomes/util.h
 	$(CC) -c $(CFLAGS) $<
 
-quadbase.o: quadbase.c quadbase.h
+quadbase.o: quadbase.c cubiomes/quadbase.h
 	$(CC) -c $(CFLAGS) $<
 
 clean:

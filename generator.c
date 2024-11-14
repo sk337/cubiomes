@@ -1,5 +1,5 @@
-#include "generator.h"
-#include "layers.h"
+#include "cubiomes/generator.h"
+#include "cubiomes/layers.h"
 
 #include <stdio.h>
 #include <stdlib.h>

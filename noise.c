@@ -1,5 +1,5 @@
 
-#include "noise.h"
+#include "cubiomes/noise.h"
 
 #include <math.h>
 #include <stdio.h>

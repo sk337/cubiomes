@@ -1,4 +1,4 @@
-#include "biomenoise.h"
+#include "cubiomes/biomenoise.h"
 
 #include "tables/btree18.h"
 #include "tables/btree192.h"

@@ -12,15 +12,15 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
 set(CMAKE_C_FLAGS_DEBUG "-O0 -g3 -DDEBUG")
 
 set(HEADERS
-	finders.h
-	generator.h
-	layers.h
-	biomenoise.h
-	biomes.h
-	noise.h
-	rng.h
-	util.h
-	quadbase.h
+	cubiomes/finders.h
+	cubiomes/generator.h
+	cubiomes/layers.h
+	cubiomes/biomenoise.h
+	cubiomes/biomes.h
+	cubiomes/noise.h
+	cubiomes/rng.h
+	cubiomes/util.h
+	cubiomes/quadbase.h
 )
 set(SOURCES
 	finders.c

@@ -1,5 +1,5 @@
-#include "finders.h"
-#include "util.h"
+#include "cubiomes/finders.h"
+#include "cubiomes/util.h"
 
 #include <sys/time.h>
 #include <time.h>

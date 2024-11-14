@@ -1,5 +1,5 @@
-#include "util.h"
-#include "finders.h"
+#include "cubiomes/util.h"
+#include "cubiomes/finders.h"
 
 #include <stdio.h>
 #include <string.h>

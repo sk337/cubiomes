@@ -1,5 +1,5 @@
-#include "finders.h"
-#include "biomes.h"
+#include "cubiomes/finders.h"
+#include "cubiomes/biomes.h"
 
 #include <stdio.h>
 #include <string.h>

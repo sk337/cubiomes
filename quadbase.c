@@ -1,5 +1,5 @@
-#include "quadbase.h"
-#include "util.h"
+#include "cubiomes/quadbase.h"
+#include "cubiomes/util.h"
 
 #include <string.h>
 #include <limits.h>
