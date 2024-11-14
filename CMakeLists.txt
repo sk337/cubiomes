@@ -39,8 +39,6 @@ set_property(TARGET objects PROPERTY POSITION_INDEPENDENT_CODE 1)
 add_library(cubiomes SHARED $<TARGET_OBJECTS:objects>)
 add_library(cubiomes_static STATIC $<TARGET_OBJECTS:objects>)
 
-# TODO: make include directories imprt as `#include <cubiomes/generator.h>` isntead of `#include <generator.h>`
-#127 add include directories 
 target_include_directories(cubiomes PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(cubiomes_static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
